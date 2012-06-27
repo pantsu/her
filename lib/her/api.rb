@@ -72,7 +72,7 @@ module Her
         request.headers.merge!(headers) if headers
         if method == :get
           # For GET requests, treat additional parameters as querystring data
-          request.url path, attrs
+          request.url "#{path}.json", attrs
         else
           # For POST, PUT and DELETE requests, treat additional parameters as request body
           request.url path
